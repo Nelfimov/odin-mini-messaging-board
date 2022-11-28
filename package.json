@@ -1,9 +1,11 @@
 {
   "name": "odin-mini-message-board",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "DEBUG=odin-mini-message-board:* node ./bin/www",
+    "startDev": "nodemon app.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
