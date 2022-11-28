@@ -1,10 +1,12 @@
-<head>
-  <title>Home | Mini messaging board</title>
-</head>
+<%- include('../partials/header') %>
 
-<body>
-  <%- include('../partials/header') %>
-  <main>
-    <h1>Welcome to the mini messaging board</h1>
-  </main>
-</body>
+<main>
+  <h1>Welcome to the mini messaging board</h1>
+  <ul>
+    <% messages.forEach((item) => { %>
+    <li><%= item.text %></li>
+    <% }); %>
+  </ul>
+</main>
+
+<%- include('../partials/footer') %>

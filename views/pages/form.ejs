@@ -1,8 +1,11 @@
-<body>
-  <%- include('../partials/header') %>
+<%- include('../partials/header') %>
+
+<main>
   <form action="/new" method="post">
     <input type="text" name="message" id="message">
     <label for="message">Message</label>
     <button>Submit</button>
   </form>
-</body>
+</main>
+
+<%- include('../partials/footer') %>
