@@ -1,8 +1,55 @@
 body {
-  padding: 50px;
+  padding: 0;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  max-width: 70rem;
+  min-height: 100vh;
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-a {
-  color: #00B7FF;
+h1 {
+  text-align: center;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: rgb(85, 85, 255);
+  color: white;
+}
+
+header span {
+  font-weight: bold;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+header a,
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:visited,
+footer a:visited {
+  color: white;
+}
+
+footer {
+  justify-content: center;
+}
+
+main .card-container {
+  display: grid;
+  grid-auto-flow: column dense;
+}
+
+main .card-container .card {
+  max-width: 300px;
 }

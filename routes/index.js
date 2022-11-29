@@ -1,7 +1,7 @@
 import {Router} from 'express';
 const router = Router();
 
-const messages = [
+export const messages = [
   {
     text: "Hi there!",
     user: "Amando",
@@ -14,8 +14,8 @@ const messages = [
   }
 ];
 
-router.get('/', (req, res, next) => {
-  res.render('pages/index', {messages});
+router.get('/', (req, res) => {
+  res.render('pages/index', {title: 'Messaging board', messages});
 });
 
 export default router;

@@ -1,9 +1,10 @@
-<%- include('../partials/header') %>
+<%- include('../partials/header', {title}) %>
 
 <main>
   <form action="/new" method="post">
-    <input type="text" name="message" id="message">
-    <label for="message">Message</label>
+    <textarea name="message" id="message" cols="30" rows="10">Input your message</textarea>
+    <input type="text" name="author" id="author">
+    <label for="author">Author</label>
     <button>Submit</button>
   </form>
 </main>

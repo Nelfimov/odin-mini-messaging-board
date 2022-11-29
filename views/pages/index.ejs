@@ -1,12 +1,24 @@
-<%- include('../partials/header') %>
+<%- include('../partials/header', {title}) %>
 
 <main>
   <h1>Welcome to the mini messaging board</h1>
-  <ul>
-    <% messages.forEach((item) => { %>
-    <li><%= item.text %></li>
+  <div class="card-container">
+    <% messages.forEach((message) => { %>
+    <div class="card">
+      <div class="message">
+        <%= message.text %>
+      </div>
+      <div class="data">
+        <div class="author">
+          <%= message.user %>
+        </div>
+        <div class="date">
+          <%= message.added %>
+        </div>
+      </div>
+    </div>
     <% }); %>
-  </ul>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
