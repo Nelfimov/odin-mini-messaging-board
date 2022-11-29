@@ -30,10 +30,16 @@ header span {
   vertical-align: middle;
 }
 
+header .links {
+  display: flex;
+  gap: 1rem;
+}
+
 header a,
 footer a {
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
 }
 
 header a:visited,
@@ -47,9 +53,34 @@ footer {
 
 main .card-container {
   display: grid;
-  grid-auto-flow: column dense;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  grid-gap: 1rem;
+  padding: 0 1rem;
 }
 
 main .card-container .card {
-  max-width: 300px;
+  min-height: 150px;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  border: 1px transparent;
+  box-shadow: 1px 1px 5px 1px grey;
+  padding: .5rem
+}
+
+main .card-container .card .data {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid grey;
+  padding-top: 5px;
+}
+
+main form {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding-top: 1rem;
 }
